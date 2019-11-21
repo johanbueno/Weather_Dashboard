@@ -3,3 +3,23 @@
     color: white;
     margin: 0 auto;
 }
+.mainDisplay{
+    border: 1px solid black;
+    margin-top: 25px;
+}
+
+.forecast{
+
+    background-color: rgb(47, 47, 204);
+    color: white;
+    width: 150px;
+    height: auto;
+    margin-top: 15px;
+    padding: 15px;
+}
+.btn {
+    width: 80%;
+    border-bottom: solid;
+    color: black;
+
+}
