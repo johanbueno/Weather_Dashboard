@@ -128,7 +128,7 @@ var storedCities = JSON.parse(localStorage.getItem('d'));
    
 
     // save to localstorage
-    storedCities.push(cities);
+    cities.push(storedCities);
     window.localStorage.setItem("d", JSON.stringify(cities));
 
 
