@@ -50,7 +50,7 @@ $(document).on("click", ".btn", function(event){
                 var temp = ((response.main.temp - 273.15) * 9 / 5 + 32).toFixed(2);
                 // console.log(today);
         
-                var iconUrl = "http://openweathermap.org/img/wn/" + icon + "@2x" + ".png";
+                var iconUrl = "https://openweathermap.org/img/wn/" + icon + "@2x" + ".png";
                 $('.Display').addClass("mainDisplay");
                 $('.city').html('<h1>' + response.name + " "+d+ " " + '</h1>');
                 $('.icon').attr('src', iconUrl);
@@ -63,7 +63,7 @@ $(document).on("click", ".btn", function(event){
                 var lati = response.coord.lat;
                 var lont = response.coord.lon;
         
-                var queryUVIndex = "http://api.openweathermap.org/data/2.5/uvi?appid=" + APIKey + "&lat=" + lati + "&lon=" + lont;
+                var queryUVIndex = "https://api.openweathermap.org/data/2.5/uvi?appid=" + APIKey + "&lat=" + lati + "&lon=" + lont;
         
                 $.ajax({
                     url: queryUVIndex,
@@ -88,7 +88,7 @@ $(document).on("click", ".btn", function(event){
                     // console.log(response.list[0].main.temp);    
         
                     var forecastIcon =  response.list[0].weather[0].icon;
-                    var iconFUrl = "http://openweathermap.org/img/wn/" + forecastIcon + "@2x" + ".png";
+                    var iconFUrl = "https://openweathermap.org/img/wn/" + forecastIcon + "@2x" + ".png";
                     var tempForecast = ((response.list[0].main.temp - 273.15) * 9 / 5 + 32).toFixed(2);
                     
                     
