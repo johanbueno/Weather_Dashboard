@@ -74,7 +74,7 @@ $(document).on("click", ".btn", function(event){
                     $('.uv').html("UV Index:" + response.value)
                 })
         
-                var forecastUrl = "http://api.openweathermap.org/data/2.5/forecast?q=" + cityEntry + ",USA&appid=" + APIKey;;
+                var forecastUrl = "https://api.openweathermap.org/data/2.5/forecast?q=" + cityEntry + ",USA&appid=" + APIKey;;
         
                 $.ajax({
                     url: forecastUrl,
