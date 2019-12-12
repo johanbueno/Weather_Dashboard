@@ -23,10 +23,11 @@ function renderButton(){
 }
 $("#citySearch").on("click", function (event) {
     dashboard ($("#cityEntry").val().trim());
+    renderButton();
 
 })
 $(document).on("click", ".btn", function(event){
-    
+    console.log("click");
     // console.log($(this).attr("data-city"))
     dashboard ($(this).attr("data-city"));
 });
@@ -99,7 +100,7 @@ $(document).on("click", ".btn", function(event){
                     $('.day1Humidity').html("Humidity: " + " "+response.list[0].main.humidity);
         
                 })
-                renderButton();
+                
             
             
         });
@@ -107,29 +108,29 @@ $(document).on("click", ".btn", function(event){
    
     
 var userEntry = $('#cityEntry');
-init();
+// init();
 
-function init() {
-    // Get stored todos from localStorage
-    // Parsing the JSON string to an object
-    var storedTodos = JSON.parse(localStorage.getItem("d"));
+// function init() {
+//     // Get stored todos from localStorage
+//     // Parsing the JSON string to an object
+    var storedTodos = JSON.parse(localStorage.getItem("d",userEntry));
   
-    // If todos were retrieved from localStorage, update the todos array to it
-    if (storedTodos !== null) {
-      city = storedTodos;
-    }
+//     // If todos were retrieved from localStorage, update the todos array to it
+//     if (storedTodos !== null) {
+//       city = storedTodos;
+//     }
   
-    // Render todos to the DOM
-    renderButton();
-  }
-localStorage.setItem('d', JSON.stringify(city))
-var storedCities = JSON.parse(localStorage.getItem('d'));
-    // format new city object for current user
+//     // Render todos to the DOM
+//     renderButton();
+//   }
+// localStorage.setItem('d', JSON.stringify(city))
+// var storedCities = JSON.parse(localStorage.getItem('d'));
+//     // format new city object for current user
    
 
-    // save to localstorage
-    cities.push(storedCities);
-    window.localStorage.setItem("d", JSON.stringify(cities));
+//     // save to localstorage
+//     cities.push(storedCities);
+//     window.localStorage.setItem("d", JSON.stringify(cities));
 
 
 
